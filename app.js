@@ -1,5 +1,7 @@
 let fs = require("fs");
 
-fs.readFile("./readme.txt", "utf8", (error, data) => {
-  fs.writeFileSync("writeFiles1.txt", data);
+fs.mkdir("asset", function () {
+  fs.readFile("readme.txt", "utf8", function (err, data) {
+    fs.writeFileSync("./asset/writeMe.txt", data);
+  });
 });
