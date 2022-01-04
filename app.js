@@ -1,9 +1,6 @@
-let events = require("events");
+let fs = require("fs");
 
-let myEmitter = new events.EventEmitter();
+let file = fs.readFileSync("./readme.txt", "utf8");
 
-myEmitter.on("someEvent", function (msg) {
-  console.log(msg);
-});
-
-myEmitter.emit("someEvent", "the event was emitted");
+let writeFiles = fs.writeFileSync("write-Files.txt", file);
+console.log(writeFiles);
