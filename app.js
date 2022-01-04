@@ -1,5 +1,9 @@
-let stuff = require("./stuff");
+let events = require("events");
 
-stuff.counter(["Kashyap", "Krupa", "Janvi"]);
-stuff.addition(3, 4);
-console.log(stuff.pi);
+let myEmitter = new events.EventEmitter();
+
+myEmitter.on("someEvent", function (msg) {
+  console.log(msg);
+});
+
+myEmitter.emit("someEvent", "the event was emitted");
