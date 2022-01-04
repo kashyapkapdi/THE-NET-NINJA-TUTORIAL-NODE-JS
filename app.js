@@ -1,6 +1,5 @@
 let fs = require("fs");
 
-let file = fs.readFileSync("./readme.txt", "utf8");
-
-let writeFiles = fs.writeFileSync("write-Files.txt", file);
-console.log(writeFiles);
+fs.readFile("./readme.txt", "utf8", (error, data) => {
+  fs.writeFileSync("writeFiles1.txt", data);
+});
