@@ -1,7 +1,4 @@
-// for importing any functionality from other file then you must write this code.
-let counter = require("./count");
+let stuff = require("./stuff");
 
-console.log("hello world");
-
-// this the counter function we import from the count.js file.
-counter(["Kashyap", "Krupa", "Janvi"]);
+stuff.counter(["Kashyap", "Krupa", "Janvi"]);
+stuff.addition(3, 4);
