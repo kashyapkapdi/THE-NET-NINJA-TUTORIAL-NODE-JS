@@ -1,6 +1,8 @@
 let express = require("express");
+let bodyParser = require("body-parser");
 
 let app = express();
+let urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.set("view engine", "ejs");
 
@@ -13,6 +15,11 @@ app.get("/", (req, res) => {
 app.get("/contact", (req, res) => {
   console.log(req.query);
   res.render("contact", { qs: req.query });
+});
+
+app.post("/contact", urlencodedParser, (req, res) => {
+  console.log(req.body);
+  res.render("contact-success", { data: req.body });
 });
 
 app.get("/profile/:name", (req, res) => {
