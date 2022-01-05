@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <title>Profile Pages</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            Person Name is: <%= person %>
+        </li>
+        <li>
+            Person Age is: <%= data.age %>
+        </li>
+        <li>
+            Person Job is: <%= data.job %>
+        </li>
+        <li>
+            Person Hobbies is:
+            <ul>
+                <% data.hobbies.forEach(function(item){ %>
+                    <li>
+                        <%=item%>
+                    </li>
+                    <% }); %>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
