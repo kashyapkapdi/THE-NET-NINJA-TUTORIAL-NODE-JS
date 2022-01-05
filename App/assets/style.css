@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+form,
+label,
+input,
+button {
+  margin: 5px;
+}
