@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Contact present</title>
+</head>
+
+<body>
+    <%- include('./partial/navbar.ejs') %>
+        <h1>Contact Info Page</h1>
+
+        <form id='form'>
+            <label for="who">who do you want to contact</label>
+            <input type="text" name='who' value="<%= qs.person %>" />
+
+            <label for="department">which Department</label>
+            <input type="text" name='department' value="<%= qs.dept %>" />
+
+            <label for="email">Your email</label>
+            <input type="text" name='email' />
+
+            <button>Submit</button>
+        </form>
+</body>
+
+</html>
